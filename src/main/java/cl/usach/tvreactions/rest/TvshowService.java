@@ -27,7 +27,7 @@ public class TvshowService {
 	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	public Iterable<Tvshow> getAllChannels(){
+	public Iterable<Tvshow> getAllTvshows(){
 		return tvshowRepository.findAll();
 	}
 	

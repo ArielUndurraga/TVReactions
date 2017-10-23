@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name="tvshow")
-@NamedQuery(name="Tvshow.findAll", query="SELECT a FROM a")
+@NamedQuery(name="Tvshow.findAll", query="SELECT a FROM Tvshow a")
 public class Tvshow implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -22,8 +22,8 @@ public class Tvshow implements Serializable{
 	@Column(name="tvshow_name", nullable=false, length=45)
 	private String tvshowName;
 	
-	@Column(name="tvshow_frequency", nullable=false, length=45)
-	private String tvshowFrequency;
+	@Column(name="tvshow_frequency", nullable=false)
+	private int tvshowFrequency;
 	
 	@Column(name="last_update", nullable=false)
 	private Timestamp lastUpdate;
@@ -44,11 +44,11 @@ public class Tvshow implements Serializable{
 		this.tvshowName = tvshowName;
 	}
 
-	public String getTvshowFrequency() {
+	public int getTvshowFrequency() {
 		return tvshowFrequency;
 	}
 
-	public void setTvshowFrequency(String tvshowFrequency) {
+	public void setTvshowFrequency(int tvshowFrequency) {
 		this.tvshowFrequency = tvshowFrequency;
 	}
 

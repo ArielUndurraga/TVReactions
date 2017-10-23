@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name="tvchannel")
-@NamedQuery(name="Channel.findAll", query="SELECT a FROM a")
+@NamedQuery(name="Channel.findAll", query="SELECT a FROM Channel a")
 public class Channel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -21,8 +21,8 @@ public class Channel implements Serializable{
 	@Column(name="channel_name", nullable=false, length=45)
 	private String channelName;
 	
-	@Column(name="channel_frequency", nullable=false, length=45)
-	private String channelFrequency;
+	@Column(name="channel_frequency", nullable=false)
+	private int channelFrequency;
 	
 	@Column(name="last_update", nullable=false)
 	private Timestamp lastUpdate;
@@ -43,11 +43,11 @@ public class Channel implements Serializable{
 		this.channelName = channelName;
 	}
 
-	public String getChannelFrequency() {
+	public int getChannelFrequency() {
 		return channelFrequency;
 	}
 
-	public void setChannelFrequency(String channelFrequency) {
+	public void setChannelFrequency(int channelFrequency) {
 		this.channelFrequency = channelFrequency;
 	}
 

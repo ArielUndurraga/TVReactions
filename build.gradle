@@ -15,6 +15,9 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
+springBoot {
+    mainClass = 'cl.usach.tvreactions.application.Application'
+}
 
 group = 'cl.usach'
 version = '0.0.1-SNAPSHOT'
@@ -22,6 +25,10 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+}
+
+war {
+	archiveName = 'tv_reactions.war'
 }
 
 
