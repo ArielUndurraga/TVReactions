@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
-@Table(name="tvchannel")
+@Table(name="channel")
 @NamedQuery(name="Channel.findAll", query="SELECT a FROM Channel a")
 public class Channel implements Serializable{
 	private static final long serialVersionUID = 1L;

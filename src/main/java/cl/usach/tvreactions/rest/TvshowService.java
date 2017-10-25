@@ -35,6 +35,7 @@ public class TvshowService {
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseBody
 	public Tvshow create(@RequestBody Tvshow resource){
+		resource.setTvshowFrequency(0);
 		return tvshowRepository.save(resource);
 	}
 
