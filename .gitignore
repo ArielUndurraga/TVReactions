@@ -1,6 +1,7 @@
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
+WEB-INF
 
 ### STS ###
 .apt_generated

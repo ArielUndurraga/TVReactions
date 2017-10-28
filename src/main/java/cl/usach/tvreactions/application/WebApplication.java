@@ -3,6 +3,7 @@ package cl.usach.tvreactions.application;
 
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -11,9 +12,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"cl.usach.tvreactions.application", "cl.usach.tvreactions.rest"})
+@ComponentScan({"cl.usach.tvreactions.application", "cl.usach.tvreactions.rest", "cl.usach.twitter.streaming"})
 @EntityScan("cl.usach.tvreactions.entities")
 @EnableJpaRepositories("cl.usach.tvreactions.repository")
+@EnableScheduling
 public class WebApplication extends SpringBootServletInitializer{
 	
 	@Override
