@@ -92,6 +92,7 @@ public class TwitterStreaming {
 				System.out.println(comment);
 				twet.insert(doc);
 				iter_stop+=1;
+				System.out.println(iter_stop);
 			}
 		};
 
@@ -109,6 +110,15 @@ public class TwitterStreaming {
 	@Scheduled(cron="0 0 10 * * *")
 	@Scheduled(cron="0 0 22 * * *")
 	public void extractTweets() {
+		try {
+			new TwitterStreaming().init();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
 		try {
 			new TwitterStreaming().init();
 		} catch (IOException e) {

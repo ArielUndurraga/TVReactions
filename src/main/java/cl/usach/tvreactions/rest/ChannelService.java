@@ -35,5 +35,10 @@ public class ChannelService {
 	public Channel create(@RequestBody Channel resource){
 		return canalRepository.save(resource);
 	}
+	
+	@RequestMapping(method = RequestMethod.PUT)
+	public Channel update(Channel resource){
+		return canalRepository.save(resource);
+	}
 }
 

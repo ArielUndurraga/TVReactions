@@ -37,6 +37,10 @@ dependencies {
 	compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.5'
 	compile group: 'commons-io', name: 'commons-io', version: '2.5'
 	compile 'mysql:mysql-connector-java'
+	compile group: 'org.apache.lucene', name: 'lucene-core', version: '4.0.0'
+    compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '4.0.0'
+    compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '4.0.0'
+    compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '4.0.0-BETA'
 	compile("org.springframework.boot:spring-boot-starter")
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')

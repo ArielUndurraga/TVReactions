@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"cl.usach.tvreactions.application", "cl.usach.tvreactions.rest", "cl.usach.twitter.streaming"})
+@ComponentScan({"cl.usach.tvreactions.application", "cl.usach.tvreactions.rest", "cl.usach.twitter.streaming", "cl.usach.lucene"})
 @EntityScan("cl.usach.tvreactions.entities")
 @EnableJpaRepositories("cl.usach.tvreactions.repository")
 @EnableScheduling
